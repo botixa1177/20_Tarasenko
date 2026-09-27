@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.GoRacing" parent="Theme.AppCompat.Light.NoActionBar" />
+
+    <style name="Theme.GoRacing.Startup" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/black</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="windowSplashScreenAnimationDuration">2000</item>
+        <item name="postSplashScreenTheme">@style/Theme.GoRacing</item>
+    </style>
+
+    <style name="Theme._20_Tarasenko" parent="Theme.AppCompat.Light.NoActionBar" />
+</resources>

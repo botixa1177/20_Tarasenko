@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A1A1A"
+    tools:context=".GameActivity">
+
+    <!-- 1. ИГРОВОЙ ТРЕК (ДОРОГА) -->
+    <ImageView
+        android:id="@+id/imgTrack"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/road"
+        app:layout_constraintBottom_toTopOf="@+id/panelBackground"
+        app:layout_constraintEnd_toStartOf="@+id/imgFinish"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/road" />
+
+    <!-- 2. ЛИНИЯ ФИНИША -->
+    <ImageView
+        android:id="@+id/imgFinish"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/finish"
+        app:layout_constraintBottom_toTopOf="@+id/panelBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 3. КРАСНАЯ МАШИНКА -->
+    <ImageView
+        android:id="@+id/carRed"
+        android:layout_width="140dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="3dp"
+        android:src="@drawable/car_red"
+        app:layout_constraintBottom_toTopOf="@+id/panelBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.722" />
+
+    <!-- 4. РОЗОВАЯ МАШИНКА -->
+    <ImageView
+        android:id="@+id/carPink"
+        android:layout_width="140dp"
+        android:layout_height="80dp"
+        android:src="@drawable/car_pink"
+        app:layout_constraintBottom_toTopOf="@+id/panelBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.302" />
+
+    <!-- 5. ТЕМНАЯ ПОДЛОЖКА СНИЗУ -->
+    <View
+        android:id="@+id/panelBackground"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:background="#80000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 6. ЛЕВАЯ КНОПКА "ЕХАТЬ" (КРАСНАЯ) -->
+    <Button
+        android:id="@+id/btnDrive1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="6dp"
+        android:backgroundTint="#FF4444"
+        android:gravity="center"
+        android:onClick="Drive1"
+        android:text="ЕХАТЬ"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/panelBackground"
+        app:layout_constraintEnd_toStartOf="@+id/btnStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/panelBackground" />
+
+    <!-- 7. ЦЕНТРАЛЬНАЯ КНОПКА "СТАРТ" (ЗЕЛЕНАЯ) -->
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="6dp"
+        android:backgroundTint="#00AA00"
+        android:gravity="center"
+        android:onClick="Start"
+        android:text="СТАРТ"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/panelBackground"
+        app:layout_constraintEnd_toStartOf="@+id/btnDrive2"
+        app:layout_constraintStart_toEndOf="@+id/btnDrive1"
+        app:layout_constraintTop_toTopOf="@+id/panelBackground" />
+
+    <!-- 8. ПРАВАЯ КНОПКА "ЕХАТЬ" (МАЛИНОВАЯ) -->
+    <Button
+        android:id="@+id/btnDrive2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="6dp"
+        android:backgroundTint="#E91E63"
+        android:gravity="center"
+        android:onClick="Drive2"
+        android:text="ЕХАТЬ"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/panelBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnStart"
+        app:layout_constraintTop_toTopOf="@+id/panelBackground" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
